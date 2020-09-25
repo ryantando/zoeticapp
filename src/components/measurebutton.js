@@ -11,15 +11,15 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     right: 20,
-    height: width * 0.22,
-    width: width * 0.22,
+    height: width * 0.21,
+    width: width * 0.21,
     borderRadius: width * 0.11,
     justifyContent: 'center',
     alignItems: 'center',
   },
   view: {
-    height: width * 0.19,
-    width: width * 0.19,
+    height: width * 0.18,
+    width: width * 0.18,
     borderRadius: width * 0.095,
     backgroundColor: '#ccc',
     justifyContent: 'center',
@@ -35,7 +35,7 @@ const MeasureButton = (props) => (
     <TouchableOpacity onPress={props.onPress}>
       <View style={styles.view}>
         <TextBody style={styles.alignCenter} bold size="small">
-          MEASURE NOW
+          {'MEASURE\nNOW'}
         </TextBody>
       </View>
     </TouchableOpacity>

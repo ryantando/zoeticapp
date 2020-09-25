@@ -52,7 +52,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     marginRight: 10,
-    marginLeft: 10,
+    marginLeft: width * 0.1,
   },
   oximeterContainerLoading: {marginRight: 0, marginLeft: 0},
   oximeterTextMiddle: {alignSelf: 'center', marginRight: -15},

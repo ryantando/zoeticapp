@@ -3,20 +3,21 @@ import {StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 import {Text} from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
+import {isTablet} from 'react-native-device-info';
 import colors from '../styles/colors';
 
 const colorsType = Object.keys(colors);
 
 const styles = StyleSheet.create({
-  small: {fontSize: 12},
-  medium: {fontSize: 16},
-  large: {fontSize: 18},
-  xxl: {fontSize: 55},
-  xl: {fontSize: 45},
-  l: {fontSize: 40},
-  h1: {fontSize: 30},
-  h2: {fontSize: 24},
-  h3: {fontSize: 20},
+  small: {fontSize: !isTablet() ? 12 : 18},
+  medium: {fontSize: !isTablet() ? 16 : 24},
+  large: {fontSize: !isTablet() ? 18 : 24},
+  xxl: {fontSize: !isTablet() ? 50 : 56},
+  xl: {fontSize: !isTablet() ? 40 : 46},
+  l: {fontSize: !isTablet() ? 36 : 40},
+  h1: {fontSize: !isTablet() ? 30 : 34},
+  h2: {fontSize: !isTablet() ? 24 : 28},
+  h3: {fontSize: !isTablet() ? 20 : 24},
   bold: {fontWeight: 'bold'},
   primary: {color: colors.primary},
   primarySoft: {color: colors.primarySoft},

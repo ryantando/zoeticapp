@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ViewPropTypes} from 'react-native';
+import {View, StyleSheet, ViewPropTypes, Dimensions} from 'react-native';
 import {Grid, LineChart, YAxis} from 'react-native-svg-charts';
 import * as shape from 'd3-shape';
 import PropTypes from 'prop-types';
@@ -8,6 +8,8 @@ import {TextBody} from './texts';
 import * as Animatable from 'react-native-animatable';
 import {Icon} from 'react-native-elements';
 import Spinner from 'react-native-spinkit';
+
+const {height} = Dimensions.get('window');
 
 const contentInset = {top: 10, bottom: 10};
 
@@ -61,7 +63,7 @@ const CardStats = (props) => {
       <Spinner
         style={styles.spinner}
         isVisible={loading}
-        size={100}
+        size={height * 0.07}
         type="Circle"
         color={'#fff'}
       />
@@ -69,7 +71,7 @@ const CardStats = (props) => {
         <Animatable.View
           style={[styles.flexOne]}
           animation="fadeIn"
-          duration={500}>
+          duration={1200}>
           <ViewRow style={styles.flexOne}>
             <YAxis
               data={dataGenerated()}

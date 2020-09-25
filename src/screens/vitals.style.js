@@ -9,14 +9,14 @@ export default StyleSheet.create({
     position: 'absolute',
     top: 0,
     width: '100%',
-    height: height * 0.2,
+    height: height * 0.25,
   },
-  container: {marginTop: 15, marginHorizontal: 20},
-  textGreeting: {marginTop: 10, marginBottom: 15},
+  container: {marginTop: height * 0.011, marginHorizontal: 20},
+  textGreeting: {marginTop: height * 0.011, marginBottom: 15},
   statContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20,
+    marginTop: height * 0.035,
   },
   cardWidth: {width: '48%'},
   faceContainer: {
@@ -30,4 +30,9 @@ export default StyleSheet.create({
   },
   mb10: {marginBottom: 10},
   noData: {textAlign: 'center', marginTop: 20},
+  scroll: {
+    marginTop: height * 0.02,
+    paddingBottom: height * 0.15,
+    borderRadius: 20,
+  },
 });
